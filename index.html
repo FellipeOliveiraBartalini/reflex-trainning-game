@@ -13,9 +13,15 @@
 <body>
     <div class="container">
         <h1>Reflex trainning game</h1>
-        <div class="board">
+        <button onclick="startPlaying()">Start</button>
+        <button onclick="stopPlaying()">Stop</button>
 
-        </div>
+        <span>Points: <p id="points">0</p></span>
+
+        <div class="board" id="board"></div>
     </div>
+
+    <script src="timer.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,9 +1,61 @@
 :root {
     --white: #f0f0f0;
+    --gray: #3c3c3c;
+    --black: #242424;
+    --red: #bf0000;
+    --yellow: #f0c802;
+}
+
+* {
+    transition: all .125s;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    
     background-color: var(--white);
+}
+
+.board {
+    width: min-content;
+    height: min-content;
+    padding: .7rem;
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: .7rem;
+
+    background-color: var(--gray);
+    border-radius: 1%;
+}
+
+.target {
+    opacity: 0;
+
+    width: 2rem;
+    height: 2rem;
+    
+    background-color: var(--yellow);
+    border: .125rem solid var(--black);
+    border-radius: .5rem;
+}
+
+.target:hover {
+    background-color: var(--red);
+    border-color: var(--white);
+    cursor: default;
+}
+
+.target--current {
+    opacity: 1;
+    cursor: pointer;
 }
